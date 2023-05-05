@@ -1,0 +1,101 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Debug server-side",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "yarn dev",
+            "localRoot": "${workspaceFolder}/view",
+            "cwd": "${workspaceRoot}/view/",
+            "sourceMaps": true,
+            "envFile": "${workspaceFolder}/view/.env",
+        },
+        {
+          "name": "Debug server-side jose",
+          "type": "node-terminal",
+          "request": "launch",
+          "command": "yarn dev -p 5001",
+          "localRoot": "${workspaceFolder}/view",
+          "cwd": "${workspaceRoot}/view/",
+          "sourceMaps": true,
+          "envFile": "${workspaceFolder}/view/.env",
+        },
+        {
+            "name": "Debug client-side",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "url": "http://localhost:5001",
+            "webRoot": "${workspaceFolder}/view"
+        },
+        {
+            "name": "Debug full stack",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "yarn dev",
+            "serverReadyAction": {
+                "pattern": "started server on .+, url: (https?://.+)",
+                "uriFormat": "%s",
+                "action": "debugWithChrome"
+            },
+            "localRoot": "${workspaceFolder}/view",
+            "cwd": "${workspaceRoot}/view/",
+            "sourceMaps": true,
+            "envFile": "${workspaceFolder}/view/.env",
+        },
+        {
+            "trace": true,
+            "name": "debug api app",
+            "type": "node",
+            "request": "attach",
+            "port": 9229,
+            "address": "127.0.0.1",
+            "restart": true,
+            "localRoot": "${workspaceFolder}/apps/api",
+            "remoteRoot": "/usr/src/app",
+            "skipFiles": [
+              "<node_internals>/app/api/**"
+            ],
+            "cwd": "${workspaceRoot}/apps/api/",
+            "sourceMaps": true,
+            "envFile": "${workspaceFolder}/apps/api/.env",
+            "autoAttachChildProcesses": true
+          },
+          {
+            "trace": true,
+            "name": "debug worker-integration app",
+            "type": "node",
+            "request": "attach",
+            "port": 9222,
+            "address": "127.0.0.1",
+            "restart": true,
+            "localRoot": "${workspaceFolder}/apps/worker-integration",
+            "remoteRoot": "/usr/src/app",
+            "skipFiles": [
+              "<node_internals>/app/worker-integration/**"
+            ],
+            "cwd": "${workspaceRoot}/apps/worker-integration/",
+            "sourceMaps": true,
+            "envFile": "${workspaceFolder}/apps/worker-integration/.env",
+            "autoAttachChildProcesses": true
+          },
+          {
+            "trace": true,
+            "name": "Depuracion Test",
+            "type": "node",
+            "request": "attach",
+            "port": 9229,
+            "address": "localhost",
+            "restart": true,
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/usr/src/app",
+            "skipFiles": [
+              "<node_internals>/**"
+            ],
+            "cwd": "${workspaceRoot}/",
+            "sourceMaps": true,
+            "envFile": "${workspaceFolder}/.env",
+            "autoAttachChildProcesses": true
+          },
+    ]
+}

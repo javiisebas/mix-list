@@ -1,0 +1,4 @@
+
+[submodule "apps/aws/recommender-lambda"]
+	path = apps/aws/recommender-lambda
+	url = git@github.com:javiisebas/recommender-lambda.git

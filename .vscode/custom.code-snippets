@@ -1,0 +1,81 @@
+{
+    "Export from": {
+        "scope": "javascript,typescript",
+        "prefix": "exfrom",
+        "body": ["export * from './$0';"],
+        "description": "Export all from local file"
+    },
+
+    "Next Link": {
+        "scope": "typescriptreact",
+        "prefix": "nextLink",
+        "body": ["import NextLink from 'next/link'"],
+        "description": "Import NextLink"
+    },
+
+    "Adds React children type": {
+        "scope": "typescriptreact",
+        "prefix": "childrenReactNode",
+        "body": ["children: React.ReactNode;"],
+        "description": "Adds React.ReactNode"
+    },
+
+    "Create class": {
+        "prefix": "cls",
+        "body": "@Injectable() export class $0 {}",
+        "description": "Create a class"
+    },
+
+    "Create enum": {
+        "prefix": "enm",
+        "body": "export enum $0 {}",
+        "description": "Create a enum"
+    },
+
+    "Create type": {
+        "prefix": "ty",
+        "body": "export type $0 =",
+        "description": "Create a type"
+    },
+
+    "Create const": {
+        "prefix": "cts",
+        "body": "export const $0 =",
+        "description": "Create a const"
+    },
+
+    "Create function": {
+        "prefix": "fuc",
+        "body": " $0(){}",
+        "description": "Create a function"
+    },
+
+    "Create function async": {
+        "prefix": "asyfuc",
+        "body": " async $0(){}",
+        "description": "Create a function async"
+    },
+
+    "Private readonly": {
+        "scope": "javascript,typescript",
+        "prefix": "privReadDep",
+        "body": ["private readonly ${1/.*/${0:/camelcase}/}: ${1/.*/${0:/capitalize}/}$0,"],
+        "description": "Creates a private readonly dependency in the constructor"
+    },
+
+    "Private readonly from Clipboard": {
+        "scope": "javascript,typescript",
+        "prefix": "privReadDepClipboard",
+        "body": [
+            "private readonly ${CLIPBOARD/.*/${0:/camelcase}/}: ${CLIPBOARD/.*/${0:/capitalize}/}$0,"
+        ],
+        "description": "Creates a private readonly dependency in the constructor"
+    },
+
+    "Throw Http Exception": {
+        "scope": "javascript,typescript",
+        "prefix": "throwHttpException",
+        "body": ["throw new HttpException('$1', HttpStatus.BAD_REQUEST$0);"],
+        "description": "Creates a private readonly dependency in the constructor"
+    }
+}

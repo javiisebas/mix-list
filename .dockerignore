@@ -1,0 +1,10 @@
+.aws
+.github
+.vercel
+.vscode
+.husky
+
+**/node_modules
+**/.next
+**/dist
+**/.turbo

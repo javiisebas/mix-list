@@ -1,0 +1,29 @@
+{
+  "name": "mix-list",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build:api": "turbo run build --scope=api --include-dependencies --no-deps",
+    "build": "turbo run build",
+    "dev:api": "turbo run dev --scope=api --include-dependencies --no-deps",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prisma": "^4.10.1",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "packageManager": "yarn@1.22.17",
+  "dependencies": {
+    "@s-ui/mono": "^2.34.0"
+  }
+}

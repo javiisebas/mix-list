@@ -1,0 +1,68 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.addMissingImports": true,
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true,
+        "source.fixAll.tslint": true,
+        "source.organizeImports": true
+    },
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "git.ignoreLimitWarning": true,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "cSpell.words": [
+        "autorization",
+        "availables",
+        "caroussel",
+        "caroussels",
+        "chakra",
+        "cloudinary",
+        "cpanel",
+        "crawlable",
+        "cursorclass",
+        "datetime",
+        "davinci",
+        "dtos",
+        "ecommerce",
+        "ecommerces",
+        "Funs",
+        "gtag",
+        "nestjs",
+        "openai",
+        "padel",
+        "prestashop",
+        "pymysql",
+        "rapidfuzz",
+        "recomendador",
+        "strapi",
+        "topsis",
+        "uncrawlable",
+        "xmltojson"
+    ],
+    "[dotenv]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[ignore]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "[properties]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "python.analysis.typeCheckingMode": "basic"
+}
